@@ -14,7 +14,11 @@ class CreateTblMpesatransactionsTable extends Migration
     public function up()
     {
         Schema::create('tbl_mpesatransactions', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('mpesatransaction_id');
+            $table->string('MerchantRequestID');
+            $table->string('CheckoutRequestID');
+            $table->unsignedBigInteger('user_id');
+            $table->string('status');
             $table->timestamps();
         });
     }

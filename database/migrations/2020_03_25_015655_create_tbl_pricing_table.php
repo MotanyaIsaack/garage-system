@@ -14,7 +14,10 @@ class CreateTblPricingTable extends Migration
     public function up()
     {
         Schema::create('tbl_pricing', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('price_id');
+            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('service_id');
+            $table->double('amount');
             $table->timestamps();
         });
     }

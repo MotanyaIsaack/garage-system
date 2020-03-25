@@ -14,7 +14,10 @@ class CreateTblVehicletypesTable extends Migration
     public function up()
     {
         Schema::create('tbl_vehicletypes', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('type_id');
+            $table->string('make');
+            $table->string('model');
+            $table->boolean('suspended')->default(0);
             $table->timestamps();
         });
     }

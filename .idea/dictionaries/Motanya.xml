@@ -2,8 +2,11 @@
   <dictionary name="Motanya">
     <words>
       <w>alertify</w>
+      <w>authenticatable</w>
       <w>datatables</w>
       <w>fillable</w>
+      <w>mpesatransaction</w>
+      <w>mpesatransactions</w>
     </words>
   </dictionary>
 </component>

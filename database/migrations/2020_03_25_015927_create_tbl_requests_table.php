@@ -14,7 +14,14 @@ class CreateTblRequestsTable extends Migration
     public function up()
     {
         Schema::create('tbl_requests', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('request_id');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('mechanic_id')->nullable();
+            $table->text('services');
+            $table->double('amount');
+            $table->boolean('suspended')->default(0);
+            $table->boolean('paid')->default(0);
+            $table->boolean('completed')->default(0);
             $table->timestamps();
         });
     }

@@ -14,7 +14,9 @@ class CreateTblVehiclecategoriesTable extends Migration
     public function up()
     {
         Schema::create('tbl_vehiclecategories', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('category_id');
+            $table->string('name');
+            $table->boolean('suspended')->default(0);
             $table->timestamps();
         });
     }
