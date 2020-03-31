@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\VehicleTypes;
 use Illuminate\Contracts\Support\Renderable;
-use Illuminate\Http\Request;
+use \App\Request;
 
 class HomeController extends Controller
 {
@@ -28,6 +29,16 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $appointments = Request::all()->count();
+        $pending_appointments = Request::all()->where('completed',0)->count();
+        $completed_appointments = Request::all()->where('completed',1)->count();
+        $vehicle_types = VehicleTypes::all();
+
+        return view('user.home',
+            [
+                'appointments'=>$appointments,'pending_appointments'=>$pending_appointments,
+                'completed_appointments'=>$completed_appointments,'types'=>$vehicle_types
+            ]
+        );
     }
 }

@@ -5,8 +5,13 @@
       <w>authenticatable</w>
       <w>datatables</w>
       <w>fillable</w>
+      <w>mpesa</w>
       <w>mpesatransaction</w>
       <w>mpesatransactions</w>
+      <w>navbar</w>
+      <w>retval</w>
+      <w>vehiclecategories</w>
+      <w>vehicletypes</w>
     </words>
   </dictionary>
 </component>

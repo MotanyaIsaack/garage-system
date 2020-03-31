@@ -12,6 +12,9 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        '/suspend/spares','/restore/spares'
+        '/suspend/spares','/restore/spares','/suspend/vehicle_category','/restore/vehicle_category',
+        '/suspend/vehicle_type','/restore/vehicle_type','/suspend/garage_service','/restore/garage_service',
+        '/suspend/service_pricing','/restore/service_pricing','/get_categories_json','/get_services_json','/amount',
+        '/add/request'
     ];
 }
